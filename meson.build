@@ -1,4 +1,4 @@
-project('com.github.flore2003.crypto-watcher', 'vala', 'c')
+project('com.github.flore2003.cryptonian', 'vala', 'c')
 
 gnome = import('gnome')
 i18n = import('i18n')

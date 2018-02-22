@@ -1,4 +1,4 @@
-namespace CryptoWatcher {
+namespace Cryptonian {
 
     public struct CoinData {
         public string symbol;

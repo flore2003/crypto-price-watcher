@@ -1,4 +1,4 @@
-namespace CryptoWatcher {
+namespace Cryptonian {
 
     public class CoinEntry : Gtk.Grid {
 

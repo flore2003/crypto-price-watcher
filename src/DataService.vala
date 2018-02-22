@@ -1,4 +1,4 @@
-namespace CryptoWatcher {
+namespace Cryptonian {
 
     class DataService : Object {
 

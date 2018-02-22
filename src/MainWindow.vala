@@ -1,4 +1,4 @@
-namespace CryptoWatcher {
+namespace Cryptonian {
 
     class MainWindow : Gtk.Window {
 
@@ -22,9 +22,9 @@ namespace CryptoWatcher {
             Object (
                 application: application,
                 height_request: 480,
-                icon_name: "com.github.flore2003.crypto-watcher",
+                icon_name: "com.github.flore2003.cryptonian",
                 resizable: true,
-                title: _("Crypto Watcher"),
+                title: _("Cryptonian"),
                 width_request: 600
             );
         }
@@ -42,7 +42,7 @@ namespace CryptoWatcher {
         private void build_ui () {
             var headerbar = new Gtk.HeaderBar ();
             headerbar.show_close_button = true;
-            headerbar.title = _("Crypto Watcher");
+            headerbar.title = _("Cryptonian");
             this.set_titlebar (headerbar);
 
             var grid = new Gtk.Grid ();
