@@ -1,0 +1,14 @@
+@define-color colorPrimary #197BBD;
+@define-color textColorPrimary #EAF3F9;
+
+.coin_list {
+	background-color: transparent;
+}
+
+.coin_list item {
+	padding: 1em;
+}
+
+.price_label {
+	font-size: 1.5em;
+}
