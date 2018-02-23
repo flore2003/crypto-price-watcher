@@ -22,6 +22,20 @@ namespace Cryptonian {
             this.price = data.price;
         }
 
+        public string get_display_price () {
+            int precision = 6;
+            if (this.price >= 10 ) {
+                precision = 2;
+            } else if (this.price >= 1) {
+                precision = 3;
+            } else if (this.price >= 0.1) {
+                precision = 4;
+            } else if (this.price >= 0.01) {
+                precision = 5;
+            }
+            return "$%'.*f".printf(precision, this.price);
+        }
+
     }
 
 }

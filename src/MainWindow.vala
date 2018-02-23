@@ -59,9 +59,12 @@ namespace Cryptonian {
             this.coin_list.bind_model (this.coin_list_model, (c) => {
                 Coin coin = (Coin) c;
                 stdout.printf ("%s %g\n", coin.symbol, coin.price);
+                var row = new Gtk.ListBoxRow ();
+                row.get_style_context ().add_class ("coin_list_row");
                 var entry = new CoinEntry ();
                 entry.set_coin(coin);
-                return entry;
+                row.add (entry);
+                return row;
             });
 
             // this.coin_list_model = new Gtk.ListStore (2, typeof (string), typeof (string));
@@ -117,7 +120,7 @@ namespace Cryptonian {
         private bool rotate_highlight_coin () {
             this.current_highlight_count = (this.current_highlight_count + 1) % this.highlight_count;
             var coin = this.data_service.get_highlight_coin (this.current_highlight_count);
-            this.indicator.set_label ("%s: $%g".printf (coin.symbol, coin.price), "XXXX: $99999.99");
+            this.indicator.set_label ("%s: %s".printf (coin.symbol, coin.get_display_price ()), "XXXX: $99999.99");
             return true;
         }
 

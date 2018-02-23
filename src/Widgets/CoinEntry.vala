@@ -13,10 +13,12 @@ namespace Cryptonian {
         ulong coin_change_handler_id;
 
         construct {
-            column_spacing = 12;
+            column_spacing = 24;
             margin = 12;
             margin_start = 24;
             margin_end = 24;
+
+            this.get_style_context ().add_class ("coin_entry");
 
             this.symbol_label = new Gtk.Label ("");
             this.symbol_label.set_xalign (0f);
@@ -51,7 +53,7 @@ namespace Cryptonian {
         }
 
         private void update_price () {
-            this.price_label.set_label ("$%g".printf(this.coin.price));
+            this.price_label.set_label (this.coin.get_display_price ());
         }
 
     }

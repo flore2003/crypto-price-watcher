@@ -5,8 +5,8 @@
 	background-color: transparent;
 }
 
-.coin_list item {
-	padding: 1em;
+.coin_list_row {
+	border-bottom: 1px solid @menu_separator;
 }
 
 .price_label {
